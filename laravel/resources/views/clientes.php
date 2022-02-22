@@ -5,8 +5,10 @@
 </head>
 
 <body>
-    <h1>Hello World Clientes <?= $nome ?>
-    </h1>
+    <form action="/cliente" method="POST">
+        <input type="text" name="valor">
+        <input type="submit" value="Enviar dados">
+    </form>
 </body>
 
 </html>

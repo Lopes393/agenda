@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/cliente/{nome}/', function ($nome) {
-    return view('clientes', ['nome' => $nome]);
+Route::get('/cliente', function () {
+    return view('clientes');
 });

@@ -4,16 +4,16 @@
 	<thead>
 		<title>mjailton</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/grade.css">
-		<link rel="stylesheet" href="css/style.css">
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/funcoes.js"></script>
+		<link rel="stylesheet" href="<?= asset('/assets/css/grade.css') ?>">
+		<link rel="stylesheet" href="<?= asset('/assets/css/style.css') ?>">
+		<script src="<?= asset('/assets/js/jquery-3.3.1.min.js') ?>"></script>
+		<script src="<?= asset('/assets/js/funcoes.js') ?>"></script>
 	</thead>
 	<body>
 		<header class="topo">
 			<div class="conteudo">
 				<a href="" class="mobmenu"></a>
-				<a href="index.html" class="logo"><img src="img/logo.png" width="128" height="40"></a>
+				<a href="index.html" class="logo"><img src="<?= asset('/assets/img/logo.png') ?>" width="128" height="40"></a>
 				<nav class="menu">
 					<ul>
 						<li><a href="index.html"><i class="ico home"></i>Home</a></li>
@@ -42,7 +42,7 @@
 							<article class="cx-home">
 								<div class="thead">ÚLTMAS ALTERAÇÕES</div>
 								<div class="cx-body">
-									<img src="img/ico-excluir.png">
+									<img src="<?= asset('/assets/img/ico-excluir.png') ?>">
 									<strong>20</strong>
 									<span>Ítens excluídos</span>
 								</div>
@@ -52,7 +52,7 @@
 							<article class="cx-home">
 								<div class="thead">ÚLTMAS ALTERAÇÕES</div>
 								<div class="cx-body">
-									<img src="img/ico-alterar.png">
+									<img src="<?= asset('/assets/img/ico-alterar.png') ?>">
 									<strong>200</strong>
 									<span>Ítens excluídos</span>
 								</div>

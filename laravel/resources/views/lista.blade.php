@@ -20,8 +20,8 @@
 			<nav class="menu">
 				<ul>
 					<li><a href="<?php echo asset(''); ?>"><i class="ico home"></i>Home</a></li>
-					<li><a href="<?php echo asset('cadastro'); ?>"><i class="ico cad"></i>Novo cadastro</a></li>
-					<li><a href="<?php echo asset('lista'); ?>"><i class="ico lista"></i>Lista de contatos</a></li>
+					<li><a href="<?php echo asset('contato/create'); ?>"><i class="ico cad"></i>Novo cadastro</a></li>
+					<li><a href="<?php echo asset('contato'); ?>"><i class="ico lista"></i>Lista de contatos</a></li>
 					<li><a href=""><i class="ico sair"></i>Sair</a></li>
 				</ul>
 			</nav>

@@ -14,17 +14,20 @@
 	<header class="topo">
 		<div class="conteudo">
 			<a href="" class="mobmenu"></a>
-			<a href="<?php echo asset(''); ?>" class="logo"><img
+			<a href="<?php echo asset(''); ?>"
+				class="logo"><img
 					src="<?php echo asset('/assets/img/logo.png'); ?>"
 					width="128" height="40"></a>
 			<nav class="menu">
 				<ul>
-					<li><a href="<?php echo asset(''); ?>"><i class="ico home"></i>Home</a></li>
 					<li><a
-							href="<?php echo asset('cadastro'); ?>"><i
+							href="<?php echo asset(''); ?>"><i
+								class="ico home"></i>Home</a></li>
+					<li><a
+							href="<?php echo asset('contato/create'); ?>"><i
 								class="ico cad"></i>Novo cadastro</a></li>
 					<li><a
-							href="<?php echo asset('lista'); ?>"><i
+							href="<?php echo asset('contato'); ?>"><i
 								class="ico lista"></i>Lista de cadastro</a></li>
 					<li><a href=""><i class="ico sair"></i>Sair</a></li>
 				</ul>
@@ -72,7 +75,8 @@
 							<article class="cx-home">
 								<div class="thead">Cadastros</div>
 								<div class="cx-body">
-									<img src="img/ico-cadastrar.png">
+									<img
+										src="<?php echo asset('/assets/img/ico-cadastrar.png'); ?>">
 									<strong>2000</strong>
 									<span>Ítens cadastrados</span>
 								</div>
@@ -87,12 +91,13 @@
 							<article class="cx-home">
 								<div class="thead">Lista de contatos</div>
 								<div class="cx-body">
-									<img src="img/ico-lista.png">
+									<img
+										src="<?php echo asset('/assets/img/ico-lista.png'); ?>">
 									<strong>2018</strong>
 									<span>Ítens excluídos</span>
 								</div>
 								<div class="tfooter">
-									<a href="<?php echo asset('cadastro'); ?>"
+									<a href="<?php echo asset('contato'); ?>"
 										class="btn">Ver lista</a>
 									<small>Há 2 dias</small>
 								</div>

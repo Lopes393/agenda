@@ -13,12 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/lista', function () {
-    return view('lista');
-});
-Route::get('/cadastro', function () {
-    return view('cadastro');
-});
+Route::get('/', 'App\Http\Controllers\HomeController@index');
+Route::resource('contato', 'App\Http\Controllers\ContatoController');

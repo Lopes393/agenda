@@ -13,7 +13,7 @@ class ContatoController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return view('Contato.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class ContatoController extends Controller
      */
     public function create()
     {
-        return view('cadastro');
+        return view('Contato.create');
     }
 
     /**

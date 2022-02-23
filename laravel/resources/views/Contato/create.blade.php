@@ -1,3 +1,5 @@
+@extends('template')
+@section('conteudo')
 <section class="caixa">
     <div class="thead"><i class="ico cad"></i>Formulario de cadastro</div>
     <div class="base-form">
@@ -76,3 +78,4 @@
         </div>
     </div>
 </section>
+@endsection

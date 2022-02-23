@@ -1,3 +1,5 @@
+@extends('template')
+@section('conteudo')
 <section class="caixa">
     <div class="thead"><i class="ico home"></i> Home</div>
     <div class="base-home">
@@ -8,8 +10,7 @@
                     <article class="cx-home">
                         <div class="thead">ÚLTMAS ALTERAÇÕES</div>
                         <div class="cx-body">
-                            <img
-                                src="<?php echo asset('/assets/img/ico-excluir.png'); ?>">
+                            <img src="{{asset('/assets/img/ico-excluir.png')}}">
                             <strong>20</strong>
                             <span>Ítens excluídos</span>
                         </div>
@@ -19,8 +20,7 @@
                     <article class="cx-home">
                         <div class="thead">ÚLTMAS ALTERAÇÕES</div>
                         <div class="cx-body">
-                            <img
-                                src="<?php echo asset('/assets/img/ico-alterar.png'); ?>">
+                            <img src="{{asset('/assets/img/ico-alterar.png')}}">
                             <strong>200</strong>
                             <span>Ítens excluídos</span>
                         </div>
@@ -31,14 +31,12 @@
                     <article class="cx-home">
                         <div class="thead">Cadastros</div>
                         <div class="cx-body">
-                            <img
-                                src="<?php echo asset('/assets/img/ico-cadastrar.png'); ?>">
+                            <img src="{{asset('/assets/img/ico-cadastrar.png')}}">
                             <strong>2000</strong>
                             <span>Ítens cadastrados</span>
                         </div>
                         <div class="tfooter">
-                            <a href="<?php echo asset('cadastro'); ?>"
-                                class="btn novo">Adicionar novo</a>
+                            <a href="{{asset('cadastro')}}" class="btn novo">Adicionar novo</a>
                             <small>Há 2 dias</small>
                         </div>
                     </article>
@@ -47,14 +45,12 @@
                     <article class="cx-home">
                         <div class="thead">Lista de contatos</div>
                         <div class="cx-body">
-                            <img
-                                src="<?php echo asset('/assets/img/ico-lista.png'); ?>">
+                            <img src="{{asset('/assets/img/ico-lista.png')}}">
                             <strong>2018</strong>
                             <span>Ítens excluídos</span>
                         </div>
                         <div class="tfooter">
-                            <a href="<?php echo asset('contato'); ?>"
-                                class="btn">Ver lista</a>
+                            <a href="{{asset('contato')}}" class="btn">Ver lista</a>
                             <small>Há 2 dias</small>
                         </div>
                     </article>
@@ -64,3 +60,4 @@
 
     </div>
 </section>
+@endsection

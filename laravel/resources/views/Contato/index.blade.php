@@ -1,3 +1,5 @@
+@extends('template')
+@section('conteudo')
 <section class="caixa">
     <div class="thead"><i class="ico lista"></i> Lista de contatos</div>
     <div class="base-lista">
@@ -120,3 +122,4 @@
     </div>
     </div>
 </section>
+@endsection

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\Models\Contato;
 
 class ContatoController extends Controller
 {
@@ -13,7 +14,8 @@ class ContatoController extends Controller
      */
     public function index()
     {
-        return view('Contato.index');
+        $contatos = Contato::all();
+        return view('Contato.index')->with('contatos', $contatos);
     }
 
     /**
@@ -31,8 +33,28 @@ class ContatoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Contato $contato)
     {
+        $request->validate([
+            'nome' => 'required',
+            'celular' => 'required',
+            'email' => 'required',
+        ]);
+
+        $contato->nome = $request->nome;
+        $contato->celular = $request->celular;
+        $contato->email = $request->email;
+        $contato->cep = $request->cep;
+        $contato->uf = $request->uf;
+        $contato->cidade = $request->cidade;
+        $contato->logradouro = $request->logradouro;
+        $contato->bairro = $request->bairro;
+        $contato->numero = $request->numero;
+        $contato->sexo = $request->sexo;
+        $contato->data_nascimento = $request->data_nascimento;
+        $contato->observacao = $request->observacao;
+        
+        $contato->save();
     }
 
     /**

@@ -11,23 +11,19 @@ return new class() extends Migration {
     public function up()
     {
         Schema::create('contatos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('nome');
-            $table->string('endereco');
-            $table->string('numero');
-            $table->string('bairro');
-            $table->string('cidade');
-            $table->string('cep');
-            $table->string('uf');
+            $table->string('logradouro')->nullable();
+            $table->string('numero')->nullable();
+            $table->string('bairro')->nullable();
+            $table->string('cidade')->nullable();
+            $table->string('cep')->nullable();
+            $table->string('uf')->nullable();
             $table->string('celular');
-            $table->string('cpf');
             $table->string('sexo')->nullable();
-            $table->string('email');
-            $table->date('data_nascimento');
-            $table->string('observacao');
-            $table->string('senha');
-            $table->string('rg');
-            $table->date('data_cadastro');
+            $table->string('email')->nullable();
+            $table->date('data_nascimento')->nullable();
+            $table->string('observacao')->nullable();
             $table->timestamps();
         });
     }

@@ -3,34 +3,7 @@
 <section class="caixa">
     <div class="thead"><i class="ico lista"></i> Lista de contatos</div>
     <div class="base-lista">
-        <div class="lst">
-            <form action="" method="">
-                <div class="rows">
-                    <div class="col-4">
-                        <select name="txt_id_empresa">
-                            <option selected>Selecione o valor...</option>
-                            <option value="1">Código</option>
-                            <option value="2">Nome</option>
-                            <option value="3">Email</option>
-                            <option value="4">Cidade</option>
-                            <option value="5">Site</option>
-                            <option value="6">Fone</option>
-                        </select>
-                    </div>
-                    <div class="col-6">
-                        <input type="text" name="" placeholder="Valor da pesquisar...">
-                    </div>
-                    <div class="col-2">
-                        <input type="submit" class="btn" value="pesquisar">
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="rows">
-            <div class="col-12">
-                <span class="itens"><i class="ico-list"></i> <b>18 </b>clientes cadastrados</span>
-            </div>
-        </div>
+        <span class="itens"><i class="ico-list"></i> <b><?= count($contatos) ?> </b>contatos cadastrados</span>
         <div class="tabela-responsiva">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <thead>
@@ -42,82 +15,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Manoel Jailton Nascimento</td>
-                        <td>mjailton@gmail.com</td>
-                        <td align="center">9899924667</td>
-                        <td align="center">
-                            <a href="formulario.html" class="btn alterar">Editar</a>
-                            <a href="formulario.html" class="btn excluir">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Manoel Jailton Nascimento</td>
-                        <td>mjailton@gmail.com</td>
-                        <td align="center">9899924667</td>
-                        <td align="center">
-                            <a href="formulario.html" class="btn alterar">Editar</a>
-                            <a href="formulario.html" class="btn excluir">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Manoel Jailton Nascimento</td>
-                        <td>mjailton@gmail.com</td>
-                        <td align="center">9899924667</td>
-                        <td align="center">
-                            <a href="formulario.html" class="btn alterar">Editar</a>
-                            <a href="formulario.html" class="btn excluir">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Manoel Jailton Nascimento</td>
-                        <td>mjailton@gmail.com</td>
-                        <td align="center">9899924667</td>
-                        <td align="center">
-                            <a href="formulario.html" class="btn alterar">Editar</a>
-                            <a href="formulario.html" class="btn excluir">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Manoel Jailton Nascimento</td>
-                        <td>mjailton@gmail.com</td>
-                        <td align="center">9899924667</td>
-                        <td align="center">
-                            <a href="formulario.html" class="btn alterar">Editar</a>
-                            <a href="formulario.html" class="btn excluir">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Manoel Jailton Nascimento</td>
-                        <td>mjailton@gmail.com</td>
-                        <td align="center">9899924667</td>
-                        <td align="center">
-                            <a href="formulario.html" class="btn alterar">Editar</a>
-                            <a href="formulario.html" class="btn excluir">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Manoel Jailton Nascimento</td>
-                        <td>mjailton@gmail.com</td>
-                        <td align="center">9899924667</td>
-                        <td align="center">
-                            <a href="formulario.html" class="btn alterar">Editar</a>
-                            <a href="formulario.html" class="btn excluir">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Manoel Jailton Nascimento</td>
-                        <td>mjailton@gmail.com</td>
-                        <td align="center">9899924667</td>
-                        <td align="center">
-                            <a href="formulario.html" class="btn alterar">Editar</a>
-                            <a href="formulario.html" class="btn excluir">Excluir</a>
-                        </td>
-                    </tr>
+                    <?php foreach($contatos as $contato => $value){ ?>
+                        <tr>
+                            <td align="left"><?= $value->nome ?></td>
+                            <td align="left"><?= $value->email ?></td>
+                            <td align="center" id="celular"><?= $value->celular ?></td>
+                            <td align="center">
+                                <a href="{{ route('contato.edit', ['contato' => $value->id]) }}" class="btn editar">Editar</a>
+                                <a href="{{route('contato.destroy', ['contato' => $value->id])}}" class="btn excluir">Excluir</a>
+                            </td>
+                        </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
-        <p class="nao-encontrado">Nenhum registro encontrado</p>
+        <!-- <p class="nao-encontrado">Nenhum registro encontrado</p> -->
 
     </div>
     </div>

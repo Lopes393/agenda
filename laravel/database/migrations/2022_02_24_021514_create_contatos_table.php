@@ -22,8 +22,8 @@ return new class() extends Migration {
             $table->string('celular');
             $table->string('sexo')->nullable();
             $table->string('email')->nullable();
-            $table->date('data_nascimento')->nullable();
             $table->string('observacao')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

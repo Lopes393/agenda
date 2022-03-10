@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Models\Contato;
+use \App\Http\Requests\ContatoRequest;
 
 class ContatoController extends Controller
 {
@@ -33,14 +34,8 @@ class ContatoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Contato $contato)
+    public function store(ContatoRequest $request, Contato $contato)
     {
-        $request->validate([
-            'nome' => 'required',
-            'celular' => 'required',
-            'email' => 'required',
-        ]);
-
         $contato->nome = $request->nome;
         $contato->celular = $request->celular;
         $contato->email = $request->email;
@@ -51,10 +46,20 @@ class ContatoController extends Controller
         $contato->bairro = $request->bairro;
         $contato->numero = $request->numero;
         $contato->sexo = $request->sexo;
-        $contato->data_nascimento = $request->data_nascimento;
         $contato->observacao = $request->observacao;
         
         $contato->save();
+
+        if ($contato) {
+            return redirect()
+                ->route('contato.index')
+                ->with('success', 'Cadastro realizado com sucesso!')
+            ;
+        }
+ 
+        return redirect()
+            ->back()
+            ->with('error', 'Falha ao realizar cadastro!');
     }
 
     /**
@@ -77,6 +82,8 @@ class ContatoController extends Controller
      */
     public function edit($id)
     {
+        $contato = Contato::find($id);
+        return view('Contato.update')->with('contato', $contato);
     }
 
     /**

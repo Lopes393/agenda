@@ -8,27 +8,6 @@
             <div class="rows">
                 <div class="col-6">
                     <article class="cx-home">
-                        <div class="thead">ÚLTMAS ALTERAÇÕES</div>
-                        <div class="cx-body">
-                            <img src="{{asset('/assets/img/ico-excluir.png')}}">
-                            <strong>20</strong>
-                            <span>Ítens excluídos</span>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-6">
-                    <article class="cx-home">
-                        <div class="thead">ÚLTMAS ALTERAÇÕES</div>
-                        <div class="cx-body">
-                            <img src="{{asset('/assets/img/ico-alterar.png')}}">
-                            <strong>200</strong>
-                            <span>Ítens excluídos</span>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-6">
-                    <article class="cx-home">
                         <div class="thead">Cadastros</div>
                         <div class="cx-body">
                             <img src="{{asset('/assets/img/ico-cadastrar.png')}}">

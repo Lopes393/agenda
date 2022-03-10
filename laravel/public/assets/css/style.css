@@ -103,7 +103,6 @@ body{font-family:arial, 'sans-serif'; font-size:1em; background: #CFCFCF}
     box-shadow: 0 0px 6px 0 #2d2d2d40;
 	border-radius:5px;
 	overflow:hidden;
-	min-height:600px
 }
 
 .thead{
@@ -471,6 +470,8 @@ body{font-family:arial, 'sans-serif'; font-size:1em; background: #CFCFCF}
 	padding:15px;
 	text-align:center;
 	margin-top:40px;
+	position: relative;
+	bottom: 0;
 }
 .rodape p{
 	color:#79796A;

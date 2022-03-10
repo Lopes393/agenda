@@ -13,9 +13,6 @@
     <div class="conteudo">
         @yield('conteudo')
     </div>
-
-    @include('rodape')
-
    <script src="{{asset('/assets/js/funcoes.js')}}"></script>
 </body>
 
